@@ -1,0 +1,39 @@
+2026-06-15 14:42:43 | INFO     | api | Logging system initialized
+2026-06-15 14:42:45 | INFO     | api | Logging system initialized
+2026-06-15 15:59:59 | INFO     | api | Logging system initialized
+2026-06-15 16:00:46 | INFO     | api | Logging system initialized
+2026-06-15 16:01:21 | INFO     | api | Logging system initialized
+2026-06-15 16:02:06 | INFO     | api | Logging system initialized
+2026-06-15 16:02:07 | WARNING  | api | Validation Error: q: Field required | Path: /api/comments/search
+2026-06-15 16:02:08 | INFO     | api | Video baru dibuat: 123456
+2026-06-15 16:02:25 | ERROR    | api | Scraping gagal untuk job 44eac05e-8917-4eb4-88b5-17e45c4d687c: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2026-06-15 16:02:26 | WARNING  | api | Validation Error: url: Field required | Path: /api/videos/scrape
+2026-06-15 16:02:26 | INFO     | api | Video baru dibuat: test_video
+2026-06-15 16:02:26 | INFO     | api | Berhasil menyimpan 2 komentar baru untuk video 410e729d-53e0-4f04-b36c-cebd932815da
+2026-06-15 16:02:27 | INFO     | api | Video baru dibuat: test_video
+2026-06-15 16:02:27 | INFO     | api | Berhasil menyimpan 1 komentar baru untuk video 17ffed11-4b9c-4e3b-86e9-0c05cf56f97a
+2026-06-15 16:02:27 | INFO     | api | Berhasil menyimpan 0 komentar baru untuk video 17ffed11-4b9c-4e3b-86e9-0c05cf56f97a
+2026-06-15 16:02:27 | INFO     | api | Video baru dibuat: test_video
+2026-06-15 16:02:27 | INFO     | api | Berhasil menyimpan 2 komentar baru untuk video 420534b3-fed2-415c-ad1c-339a0b5e164a
+2026-06-15 16:02:28 | INFO     | api | Video baru dibuat: test_video
+2026-06-15 16:02:28 | INFO     | api | Berhasil menyimpan 3 komentar baru untuk video 5dea9d05-62e6-44b9-9897-84a2771622a5
+2026-06-15 16:02:28 | INFO     | api | Video baru dibuat: 123456
+2026-06-15 16:02:29 | INFO     | api | Video baru dibuat: 123456
+2026-06-15 16:02:29 | INFO     | api | Video baru dibuat: 123456
+2026-06-15 16:02:51 | INFO     | api | Logging system initialized
+2026-06-15 16:02:52 | WARNING  | api | Validation Error: q: Field required | Path: /api/comments/search
+2026-06-15 16:02:53 | INFO     | api | Video baru dibuat: 123456
+2026-06-15 16:03:06 | ERROR    | api | Scraping gagal untuk job 3af1551c-9014-4769-b8ea-6ab4f9520a5c: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2026-06-15 16:03:07 | WARNING  | api | Validation Error: url: Field required | Path: /api/videos/scrape
+2026-06-15 16:03:07 | INFO     | api | Video baru dibuat: test_video
+2026-06-15 16:03:07 | INFO     | api | Berhasil menyimpan 2 komentar baru untuk video 9270e111-cded-4c63-8376-f992cad912a9
+2026-06-15 16:03:08 | INFO     | api | Video baru dibuat: test_video
+2026-06-15 16:03:08 | INFO     | api | Berhasil menyimpan 1 komentar baru untuk video f888bdf2-4fb1-45a3-99ca-56b4f04c9c98
+2026-06-15 16:03:08 | INFO     | api | Berhasil menyimpan 0 komentar baru untuk video f888bdf2-4fb1-45a3-99ca-56b4f04c9c98
+2026-06-15 16:03:08 | INFO     | api | Video baru dibuat: test_video
+2026-06-15 16:03:08 | INFO     | api | Berhasil menyimpan 2 komentar baru untuk video 274befaa-4e96-4c1d-97ae-551517b660bb
+2026-06-15 16:03:09 | INFO     | api | Video baru dibuat: test_video
+2026-06-15 16:03:09 | INFO     | api | Berhasil menyimpan 3 komentar baru untuk video 2c0b408b-5c80-45b3-a7d1-053912891b56
+2026-06-15 16:03:10 | INFO     | api | Video baru dibuat: 123456
+2026-06-15 16:03:10 | INFO     | api | Video baru dibuat: 123456
+2026-06-15 16:03:11 | INFO     | api | Video baru dibuat: 123456

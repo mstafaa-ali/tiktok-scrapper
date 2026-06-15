@@ -1,0 +1,4 @@
+2026-06-15 16:02:08 | INFO     | scraper | Mulai scraping komentar dari: https://www.tiktok.com/@user/video/123456
+2026-06-15 16:02:25 | ERROR    | scraper | Gagal mengambil komentar dari https://www.tiktok.com/@user/video/123456: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2026-06-15 16:02:53 | INFO     | scraper | Mulai scraping komentar dari: https://www.tiktok.com/@user/video/123456
+2026-06-15 16:03:06 | ERROR    | scraper | Gagal mengambil komentar dari https://www.tiktok.com/@user/video/123456: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
