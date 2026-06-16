@@ -37,3 +37,1167 @@
 2026-06-15 16:03:10 | INFO     | api | Video baru dibuat: 123456
 2026-06-15 16:03:10 | INFO     | api | Video baru dibuat: 123456
 2026-06-15 16:03:11 | INFO     | api | Video baru dibuat: 123456
+2026-06-16 05:11:58 | INFO     | api | Logging system initialized
+2026-06-16 05:12:00 | WARNING  | api | Validation Error: q: Field required | Path: /api/comments/search
+2026-06-16 05:12:00 | INFO     | api | Video baru dibuat: 123456
+2026-06-16 05:12:18 | ERROR    | api | Scraping gagal untuk job 61de4a84-e3f2-4275-951f-adc11fd0e8db: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2026-06-16 05:12:19 | WARNING  | api | Validation Error: url: Field required | Path: /api/videos/scrape
+2026-06-16 05:12:20 | INFO     | api | Video baru dibuat: test_video
+2026-06-16 05:12:20 | INFO     | api | Berhasil menyimpan 2 komentar baru untuk video 93a5793c-9cee-4697-971b-ad76aec98fac
+2026-06-16 05:12:20 | INFO     | api | Video baru dibuat: test_video
+2026-06-16 05:12:20 | INFO     | api | Berhasil menyimpan 1 komentar baru untuk video c4d9852f-f02b-4386-b3c9-be1368e4a817
+2026-06-16 05:12:20 | INFO     | api | Berhasil menyimpan 0 komentar baru untuk video c4d9852f-f02b-4386-b3c9-be1368e4a817
+2026-06-16 05:12:21 | INFO     | api | Video baru dibuat: test_video
+2026-06-16 05:12:21 | INFO     | api | Berhasil menyimpan 2 komentar baru untuk video 717542fd-c82b-4c42-80b5-901630742ded
+2026-06-16 05:12:21 | INFO     | api | Video baru dibuat: test_video
+2026-06-16 05:12:21 | INFO     | api | Berhasil menyimpan 3 komentar baru untuk video 513cfe13-27d0-44a8-9ea0-8785869d6edc
+2026-06-16 05:12:22 | INFO     | api | Video baru dibuat: 123456
+2026-06-16 05:12:22 | INFO     | api | Video baru dibuat: 123456
+2026-06-16 05:12:23 | INFO     | api | Video baru dibuat: 123456
+2026-06-16 10:09:57 | INFO     | api | Logging system initialized
+2026-06-16 10:10:00 | INFO     | api | Logging system initialized
+2026-06-16 10:11:31 | INFO     | api | Logging system initialized
+2026-06-16 11:47:17 | INFO     | api | Logging system initialized
+2026-06-16 11:47:20 | INFO     | api | Logging system initialized
+2026-06-16 11:55:34 | CRITICAL | api | Unhandled Exception: cannot access local variable 'desc' where it is not associated with a value | Path: /api/dashboard/activity
+Traceback (most recent call last):
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1574, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 2012, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1594, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1183, in handle
+    await app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 143, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 129, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 683, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 337, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\app\api\dashboard.py", line 48, in get_recent_activity
+    stmt = select(ScrapeJob).order_by(desc(ScrapeJob.created_at)).limit(5)
+                                      ^^^^
+UnboundLocalError: cannot access local variable 'desc' where it is not associated with a value
+2026-06-16 11:55:35 | CRITICAL | api | Unhandled Exception: cannot access local variable 'desc' where it is not associated with a value | Path: /api/dashboard/activity
+Traceback (most recent call last):
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1574, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 2012, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1594, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1183, in handle
+    await app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 143, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 129, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 683, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 337, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\app\api\dashboard.py", line 48, in get_recent_activity
+    stmt = select(ScrapeJob).order_by(desc(ScrapeJob.created_at)).limit(5)
+                                      ^^^^
+UnboundLocalError: cannot access local variable 'desc' where it is not associated with a value
+2026-06-16 11:55:46 | CRITICAL | api | Unhandled Exception: cannot access local variable 'desc' where it is not associated with a value | Path: /api/dashboard/activity
+Traceback (most recent call last):
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1574, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 2012, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1594, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1183, in handle
+    await app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 143, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 129, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 683, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 337, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\app\api\dashboard.py", line 48, in get_recent_activity
+    stmt = select(ScrapeJob).order_by(desc(ScrapeJob.created_at)).limit(5)
+                                      ^^^^
+UnboundLocalError: cannot access local variable 'desc' where it is not associated with a value
+2026-06-16 11:55:47 | CRITICAL | api | Unhandled Exception: cannot access local variable 'desc' where it is not associated with a value | Path: /api/dashboard/activity
+Traceback (most recent call last):
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1574, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 2012, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1594, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1183, in handle
+    await app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 143, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 129, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 683, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 337, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\app\api\dashboard.py", line 48, in get_recent_activity
+    stmt = select(ScrapeJob).order_by(desc(ScrapeJob.created_at)).limit(5)
+                                      ^^^^
+UnboundLocalError: cannot access local variable 'desc' where it is not associated with a value
+2026-06-16 11:55:48 | CRITICAL | api | Unhandled Exception: cannot access local variable 'desc' where it is not associated with a value | Path: /api/dashboard/activity
+Traceback (most recent call last):
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1574, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 2012, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1594, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1183, in handle
+    await app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 143, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 129, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 683, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 337, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\app\api\dashboard.py", line 48, in get_recent_activity
+    stmt = select(ScrapeJob).order_by(desc(ScrapeJob.created_at)).limit(5)
+                                      ^^^^
+UnboundLocalError: cannot access local variable 'desc' where it is not associated with a value
+2026-06-16 11:55:52 | WARNING  | api | Validation Error: url: Field required | Path: /api/videos/scrape
+2026-06-16 13:03:06 | INFO     | api | Logging system initialized
+2026-06-16 13:03:10 | INFO     | api | Logging system initialized
+2026-06-16 13:05:50 | ERROR    | api | Scraping gagal untuk job 661553f1-547c-46d0-a666-1db0afa02186: 
+2026-06-16 13:05:58 | CRITICAL | api | Unhandled Exception: type object 'ScrapeJob' has no attribute 'created_at' | Path: /api/dashboard/activity
+Traceback (most recent call last):
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1574, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 2012, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1594, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1183, in handle
+    await app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 143, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 129, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 683, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 337, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\app\api\dashboard.py", line 48, in get_recent_activity
+    stmt = select(ScrapeJob).order_by(desc(ScrapeJob.created_at)).limit(5)
+                                           ^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'ScrapeJob' has no attribute 'created_at'
+2026-06-16 13:06:00 | CRITICAL | api | Unhandled Exception: type object 'ScrapeJob' has no attribute 'created_at' | Path: /api/dashboard/activity
+Traceback (most recent call last):
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1574, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 2012, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1594, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1183, in handle
+    await app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 143, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 129, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 683, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 337, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\app\api\dashboard.py", line 48, in get_recent_activity
+    stmt = select(ScrapeJob).order_by(desc(ScrapeJob.created_at)).limit(5)
+                                           ^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'ScrapeJob' has no attribute 'created_at'
+2026-06-16 13:06:09 | ERROR    | api | Scraping gagal untuk job c1122bd3-928a-4f95-8e78-f267acaeaa47: 
+2026-06-16 13:06:30 | CRITICAL | api | Unhandled Exception: type object 'ScrapeJob' has no attribute 'created_at' | Path: /api/dashboard/activity
+Traceback (most recent call last):
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1574, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 2012, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1594, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1183, in handle
+    await app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 143, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 129, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 683, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 337, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\app\api\dashboard.py", line 48, in get_recent_activity
+    stmt = select(ScrapeJob).order_by(desc(ScrapeJob.created_at)).limit(5)
+                                           ^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'ScrapeJob' has no attribute 'created_at'
+2026-06-16 13:06:31 | CRITICAL | api | Unhandled Exception: type object 'ScrapeJob' has no attribute 'created_at' | Path: /api/dashboard/activity
+Traceback (most recent call last):
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1574, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 2012, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1594, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1183, in handle
+    await app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 143, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 129, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 683, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 337, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\app\api\dashboard.py", line 48, in get_recent_activity
+    stmt = select(ScrapeJob).order_by(desc(ScrapeJob.created_at)).limit(5)
+                                           ^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'ScrapeJob' has no attribute 'created_at'
+2026-06-16 14:12:31 | INFO     | api | Logging system initialized
+2026-06-16 14:12:34 | INFO     | api | Logging system initialized
+2026-06-16 14:17:55 | CRITICAL | api | Unhandled Exception: name 'func' is not defined | Path: /api/jobs
+Traceback (most recent call last):
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1574, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 2012, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1594, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1183, in handle
+    await app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 143, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 129, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 683, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 337, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\app\api\jobs.py", line 38, in get_jobs
+    count_stmt = select(func.count()).select_from(stmt.subquery())
+                        ^^^^
+NameError: name 'func' is not defined
+2026-06-16 14:17:56 | CRITICAL | api | Unhandled Exception: name 'func' is not defined | Path: /api/jobs
+Traceback (most recent call last):
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1574, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 2012, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1594, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1183, in handle
+    await app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 143, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 129, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 683, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 337, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\app\api\jobs.py", line 38, in get_jobs
+    count_stmt = select(func.count()).select_from(stmt.subquery())
+                        ^^^^
+NameError: name 'func' is not defined
+2026-06-16 14:18:02 | CRITICAL | api | Unhandled Exception: name 'func' is not defined | Path: /api/jobs
+Traceback (most recent call last):
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1574, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 2012, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1594, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1183, in handle
+    await app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 143, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 129, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 683, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 337, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\app\api\jobs.py", line 38, in get_jobs
+    count_stmt = select(func.count()).select_from(stmt.subquery())
+                        ^^^^
+NameError: name 'func' is not defined
+2026-06-16 14:18:03 | CRITICAL | api | Unhandled Exception: name 'func' is not defined | Path: /api/jobs
+Traceback (most recent call last):
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1574, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 2012, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1594, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1183, in handle
+    await app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 143, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 129, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 683, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 337, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\app\api\jobs.py", line 38, in get_jobs
+    count_stmt = select(func.count()).select_from(stmt.subquery())
+                        ^^^^
+NameError: name 'func' is not defined
+2026-06-16 14:18:27 | INFO     | api | Video baru dibuat: 7648345083124698375
+2026-06-16 14:18:27 | CRITICAL | api | Unhandled Exception: name 'func' is not defined | Path: /api/jobs
+Traceback (most recent call last):
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1574, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 2012, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1594, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1183, in handle
+    await app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 143, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 129, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 683, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 337, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\app\api\jobs.py", line 38, in get_jobs
+    count_stmt = select(func.count()).select_from(stmt.subquery())
+                        ^^^^
+NameError: name 'func' is not defined
+2026-06-16 14:18:27 | ERROR    | api | Scraping gagal untuk job 6022154b-fb88-49b3-a96f-195b0d1d9f7b: 
+2026-06-16 14:18:28 | CRITICAL | api | Unhandled Exception: name 'func' is not defined | Path: /api/jobs
+Traceback (most recent call last):
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1574, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 2012, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1594, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1183, in handle
+    await app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 143, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 129, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 683, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 337, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\app\api\jobs.py", line 38, in get_jobs
+    count_stmt = select(func.count()).select_from(stmt.subquery())
+                        ^^^^
+NameError: name 'func' is not defined
+2026-06-16 14:18:35 | CRITICAL | api | Unhandled Exception: name 'func' is not defined | Path: /api/jobs
+Traceback (most recent call last):
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1574, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 2012, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1594, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1183, in handle
+    await app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 143, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 129, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 683, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 337, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\app\api\jobs.py", line 38, in get_jobs
+    count_stmt = select(func.count()).select_from(stmt.subquery())
+                        ^^^^
+NameError: name 'func' is not defined
+2026-06-16 14:19:19 | CRITICAL | api | Unhandled Exception: name 'func' is not defined | Path: /api/jobs
+Traceback (most recent call last):
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1574, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 2012, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1594, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1183, in handle
+    await app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 143, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 129, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 683, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 337, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\app\api\jobs.py", line 38, in get_jobs
+    count_stmt = select(func.count()).select_from(stmt.subquery())
+                        ^^^^
+NameError: name 'func' is not defined
+2026-06-16 14:19:20 | CRITICAL | api | Unhandled Exception: name 'func' is not defined | Path: /api/jobs
+Traceback (most recent call last):
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1574, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 2012, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1594, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1183, in handle
+    await app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 143, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 129, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 683, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 337, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\app\api\jobs.py", line 38, in get_jobs
+    count_stmt = select(func.count()).select_from(stmt.subquery())
+                        ^^^^
+NameError: name 'func' is not defined
+2026-06-16 14:23:51 | INFO     | api | Logging system initialized
+2026-06-16 14:23:53 | INFO     | api | Logging system initialized
+2026-06-16 14:25:26 | CRITICAL | api | Unhandled Exception: name 'func' is not defined | Path: /api/jobs
+Traceback (most recent call last):
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1574, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 2012, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1594, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1183, in handle
+    await app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 143, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 129, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 683, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 337, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\app\api\jobs.py", line 38, in get_jobs
+    count_stmt = select(func.count()).select_from(stmt.subquery())
+                        ^^^^
+NameError: name 'func' is not defined
+2026-06-16 14:25:27 | CRITICAL | api | Unhandled Exception: name 'func' is not defined | Path: /api/jobs
+Traceback (most recent call last):
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1574, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 2012, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1594, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1183, in handle
+    await app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 143, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 129, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 683, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 337, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\app\api\jobs.py", line 38, in get_jobs
+    count_stmt = select(func.count()).select_from(stmt.subquery())
+                        ^^^^
+NameError: name 'func' is not defined
+2026-06-16 14:25:29 | INFO     | api | Video baru dibuat: 7651415042054720775
+2026-06-16 14:25:29 | CRITICAL | api | Unhandled Exception: name 'func' is not defined | Path: /api/jobs
+Traceback (most recent call last):
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1574, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 2012, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1594, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1183, in handle
+    await app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 143, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 129, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 683, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 337, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\app\api\jobs.py", line 38, in get_jobs
+    count_stmt = select(func.count()).select_from(stmt.subquery())
+                        ^^^^
+NameError: name 'func' is not defined
+2026-06-16 14:25:29 | ERROR    | api | Scraping gagal untuk job 6231175f-d9ff-42b9-9c5b-7d21b6c81095: 
+2026-06-16 14:25:30 | CRITICAL | api | Unhandled Exception: name 'func' is not defined | Path: /api/jobs
+Traceback (most recent call last):
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1574, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 2012, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1594, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 1183, in handle
+    await app(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 143, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 129, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 683, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\Ali\Project\tiktok-scrapper\backend\venv\Lib\site-packages\fastapi\routing.py", line 337, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Ali\Project\tiktok-scrapper\backend\app\api\jobs.py", line 38, in get_jobs
+    count_stmt = select(func.count()).select_from(stmt.subquery())
+                        ^^^^
+NameError: name 'func' is not defined
+2026-06-16 14:27:01 | INFO     | api | Video baru dibuat: 7648612395304160544
+2026-06-16 14:27:01 | ERROR    | api | Scraping gagal untuk job 4a259a7b-d73f-498e-b974-747fa909f79b: 
+2026-06-16 14:35:37 | INFO     | api | Logging system initialized
+2026-06-16 14:35:42 | INFO     | api | Logging system initialized
+2026-06-16 14:36:59 | INFO     | api | Video baru dibuat: 7651736325955046676
+2026-06-16 14:37:18 | INFO     | api | Berhasil menyimpan 25 komentar baru untuk video 757d7dcc-19af-464b-b0f5-73784b4a0301
+2026-06-16 14:37:18 | INFO     | api | Scraping selesai untuk job 678459ac-5a52-44c0-9353-627a641ceaab: 25 komentar
+2026-06-16 14:45:57 | INFO     | api | Logging system initialized
+2026-06-16 14:45:59 | INFO     | api | Logging system initialized
+2026-06-16 14:52:40 | INFO     | api | Video baru dibuat: 7618977097742175502
+2026-06-16 14:53:02 | INFO     | api | Berhasil menyimpan 100 komentar baru untuk video 8469a706-aa8e-4039-85f0-aafcb889654e
+2026-06-16 14:53:02 | INFO     | api | Scraping selesai untuk job e3c5053b-a3eb-4715-a6be-32a3612ac72a: 100 komentar
+2026-06-16 14:56:02 | INFO     | api | Video baru dibuat: 7650554627452095766
+2026-06-16 14:56:19 | INFO     | api | Berhasil menyimpan 1 komentar baru untuk video 87029bef-0ed1-4cf1-ba72-d549f9b0db71
+2026-06-16 14:56:19 | INFO     | api | Scraping selesai untuk job a456af3b-e88b-447c-9e20-49d8f6a71235: 1 komentar
+2026-06-16 14:59:16 | INFO     | api | Video baru dibuat: 7648639651212774676
+2026-06-16 14:59:36 | INFO     | api | Berhasil menyimpan 100 komentar baru untuk video 2e780588-bf90-4072-bf70-f801ff89b774
+2026-06-16 14:59:36 | INFO     | api | Scraping selesai untuk job e0e40952-e3ba-4f74-8aa0-acda43a06fd2: 100 komentar
+2026-06-16 15:00:10 | ERROR    | api | Scraping gagal untuk job 2c19a4e0-2018-4695-a20b-8b83550b3026: URL format not supported. Below is an example of a supported url.
+https://www.tiktok.com/@therock/video/6829267836783971589
+2026-06-16 15:00:50 | ERROR    | api | Scraping gagal untuk job ce5e0f1d-6ac4-4ac6-9a59-a0fab9ddecf8: URL format not supported. Below is an example of a supported url.
+https://www.tiktok.com/@therock/video/6829267836783971589
+2026-06-16 15:01:14 | INFO     | api | Berhasil menyimpan 7 komentar baru untuk video 2e780588-bf90-4072-bf70-f801ff89b774
+2026-06-16 15:01:14 | INFO     | api | Scraping selesai untuk job 1d2165d2-6906-40ae-b084-5852703c2331: 7 komentar
+2026-06-16 15:09:24 | INFO     | api | Logging system initialized
+2026-06-17 01:26:59 | INFO     | api | Video baru dibuat: 7636035808616566030
+2026-06-17 01:27:44 | INFO     | api | Berhasil menyimpan 64 komentar baru untuk video 4108820b-0b25-4e45-b311-6961109a3446
+2026-06-17 01:27:44 | INFO     | api | Scraping selesai untuk job f355736d-3afd-42c5-ace4-516e4c0feff9: 64 komentar
+2026-06-17 01:39:06 | INFO     | api | Logging system initialized

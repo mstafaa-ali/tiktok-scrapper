@@ -31,7 +31,7 @@ class ScraperService:
                     ms_tokens=None,
                     num_sessions=1,
                     sleep_after=3,
-                    headless=True,
+                    headless=False,
                 )
 
                 video_id = self._extract_video_id(video_url)
@@ -71,3 +71,16 @@ class ScraperService:
             "reply_count": getattr(raw_comment, "reply_count", 0) or 0,
             "comment_created_at": getattr(raw_comment, "create_time", None),
         }
+
+def sync_get_video_comments(video_url: str, count: int = 100) -> list[dict]:
+    """
+    Wrapper untuk menjalankan scraper di event loop terpisah.
+    Sangat berguna untuk menghindari konflik event loop dengan Uvicorn/FastAPI.
+    """
+    import asyncio
+    import sys
+    if sys.platform == 'win32':
+        asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
+    
+    scraper = ScraperService()
+    return asyncio.run(scraper.get_video_comments(video_url, count))

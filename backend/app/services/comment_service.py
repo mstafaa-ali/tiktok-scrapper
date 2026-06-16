@@ -46,16 +46,24 @@ class CommentService:
         return saved_count
 
     async def get_comments_by_video(
-        self, video_id: UUID, page: int = 1, limit: int = 100
+        self, video_id: UUID | None, page: int = 1, limit: int = 100
     ) -> list[Comment]:
-        """Ambil komentar berdasarkan video ID dengan pagination."""
+        """Ambil komentar berdasarkan video ID (opsional) dengan pagination."""
         offset = (page - 1) * limit
-        stmt = (
-            select(Comment)
-            .where(Comment.video_id == video_id)
-            .offset(offset)
-            .limit(limit)
-        )
+        stmt = select(Comment)
+        if video_id:
+            stmt = stmt.where(Comment.video_id == video_id)
+        stmt = stmt.offset(offset).limit(limit)
+        result = await self.db.execute(stmt)
+        return list(result.scalars().all())
+
+    async def get_all_comments(self, video_id: UUID | None = None) -> list[Comment]:
+        """Ambil semua komentar (opsional berdasarkan video ID) untuk keperluan export."""
+        stmt = select(Comment)
+        if video_id:
+            stmt = stmt.where(Comment.video_id == video_id)
+        # Order by created_at desc
+        stmt = stmt.order_by(Comment.comment_created_at.desc().nulls_last())
         result = await self.db.execute(stmt)
         return list(result.scalars().all())
 

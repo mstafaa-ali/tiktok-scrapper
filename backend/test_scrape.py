@@ -1,6 +1,6 @@
 """
 Script untuk test manual scraping komentar TikTok.
-Jalankan dengan: venv\Scripts\python test_scrape.py <URL_VIDEO>
+  Jalankan dengan: venv\Scripts\python test_scrape.py <URL_VIDEO>
 
 Contoh:
   venv\Scripts\python test_scrape.py https://www.tiktok.com/@username/video/1234567890
@@ -19,7 +19,7 @@ from app.services.scraper_service import ScraperService
 from app.services.video_service import VideoService
 from app.services.comment_service import CommentService
 from app.models.scrape_job import ScrapeJob
-from datetime import datetime
+from datetime import datetime, timezone
 
 
 async def test_scrape(video_url: str):
@@ -55,7 +55,7 @@ async def test_scrape(video_url: str):
         # Scraping komentar
         print(f"\n[2] Mengambil komentar dari TikTok...")
         try:
-            comments_data = await scraper.get_video_comments(video_url, count=30)
+            comments_data = await scraper.get_video_comments(video_url, count=200)
             print(f"    Total komentar berhasil diambil: {len(comments_data)}")
 
             # Preview 3 komentar pertama
@@ -71,14 +71,14 @@ async def test_scrape(video_url: str):
             # Update job ke SUCCESS
             job.status = "SUCCESS"
             job.total_comments = saved_count
-            job.finished_at = datetime.utcnow()
+            job.finished_at = datetime.now(timezone.utc).replace(tzinfo=None)
             await db.commit()
             print(f"    ScrapeJob status: {job.status}")
 
         except Exception as e:
             # Update job ke FAILED
             job.status = "FAILED"
-            job.finished_at = datetime.utcnow()
+            job.finished_at = datetime.now(timezone.utc).replace(tzinfo=None)
             await db.commit()
             print(f"    GAGAL: {e}")
             raise
@@ -90,7 +90,7 @@ async def test_scrape(video_url: str):
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Usage: venv\\Scripts\\python test_scrape.py <URL_VIDEO_TIKTOK>")
-        print("Contoh: venv\\Scripts\\python test_scrape.py https://www.tiktok.com/@user/video/123456")
+        print("Contoh: venv\\Scripts\\python test_scrape.py https://www.tiktok.com/@youdontknowme._..k/video/7650681134845578510?is_from_webapp=1&sender_device=pc")
         sys.exit(1)
 
     url = sys.argv[1]

@@ -2,3 +2,15 @@
 2026-06-15 16:02:25 | ERROR    | scraper | Gagal mengambil komentar dari https://www.tiktok.com/@user/video/123456: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
 2026-06-15 16:02:53 | INFO     | scraper | Mulai scraping komentar dari: https://www.tiktok.com/@user/video/123456
 2026-06-15 16:03:06 | ERROR    | scraper | Gagal mengambil komentar dari https://www.tiktok.com/@user/video/123456: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2026-06-16 05:12:00 | INFO     | scraper | Mulai scraping komentar dari: https://www.tiktok.com/@user/video/123456
+2026-06-16 05:12:18 | ERROR    | scraper | Gagal mengambil komentar dari https://www.tiktok.com/@user/video/123456: None -> TikTok returned an empty response. They are detecting you're a bot, try some of these: headless=False, browser='webkit', consider using a proxy
+2026-06-16 13:05:49 | INFO     | scraper | Mulai scraping komentar dari: https://www.tiktok.com/@zircont0/video/7650918610524802311
+2026-06-16 13:05:50 | ERROR    | scraper | Gagal mengambil komentar dari https://www.tiktok.com/@zircont0/video/7650918610524802311: 
+2026-06-16 13:06:09 | INFO     | scraper | Mulai scraping komentar dari: https://www.tiktok.com/@zircont0/video/7650918610524802311
+2026-06-16 13:06:09 | ERROR    | scraper | Gagal mengambil komentar dari https://www.tiktok.com/@zircont0/video/7650918610524802311: 
+2026-06-16 14:18:27 | INFO     | scraper | Mulai scraping komentar dari: https://www.tiktok.com/@iniargyyy/photo/7648345083124698375?is_from_webapp=1&sender_device=pc
+2026-06-16 14:18:27 | ERROR    | scraper | Gagal mengambil komentar dari https://www.tiktok.com/@iniargyyy/photo/7648345083124698375?is_from_webapp=1&sender_device=pc: 
+2026-06-16 14:25:29 | INFO     | scraper | Mulai scraping komentar dari: https://www.tiktok.com/@aliftowew/photo/7651415042054720775?is_from_webapp=1&sender_device=pc
+2026-06-16 14:25:29 | ERROR    | scraper | Gagal mengambil komentar dari https://www.tiktok.com/@aliftowew/photo/7651415042054720775?is_from_webapp=1&sender_device=pc: 
+2026-06-16 14:27:01 | INFO     | scraper | Mulai scraping komentar dari: https://www.tiktok.com/@we.cattok/video/7648612395304160544?is_from_webapp=1&sender_device=pc
+2026-06-16 14:27:01 | ERROR    | scraper | Gagal mengambil komentar dari https://www.tiktok.com/@we.cattok/video/7648612395304160544?is_from_webapp=1&sender_device=pc: 

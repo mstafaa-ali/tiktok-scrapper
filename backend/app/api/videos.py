@@ -19,35 +19,46 @@ logger = logging.getLogger("api")
 router = APIRouter(prefix="/api/videos", tags=["Videos"])
 
 
-async def run_scraping(video_id: UUID, video_url: str, job_id: UUID, db: AsyncSession):
+async def run_scraping(video_id: UUID, video_url: str, job_id: UUID):
     """Background task untuk menjalankan scraping."""
-    job = None
-    try:
-        stmt = select(ScrapeJob).where(ScrapeJob.id == job_id)
-        result = await db.execute(stmt)
-        job = result.scalar_one()
-        job.status = "RUNNING"
-        await db.commit()
+    import asyncio
+    import concurrent.futures
+    from app.database.connection import async_session
+    from app.services.scraper_service import sync_get_video_comments
 
-        scraper = ScraperService()
-        comments_data = await scraper.get_video_comments(video_url)
+    # Gunakan session DB yang baru untuk task background ini
+    async with async_session() as db:
+        job = None
+        try:
+            stmt = select(ScrapeJob).where(ScrapeJob.id == job_id)
+            result = await db.execute(stmt)
+            job = result.scalar_one()
+            job.status = "RUNNING"
+            await db.commit()
 
-        comment_service = CommentService(db)
-        saved_count = await comment_service.save_comments(video_id, comments_data)
+            # Jalankan scraper di proses terpisah untuk menghindari konflik Playwright dengan event loop Uvicorn
+            loop = asyncio.get_running_loop()
+            with concurrent.futures.ProcessPoolExecutor() as pool:
+                comments_data = await loop.run_in_executor(
+                    pool, sync_get_video_comments, video_url, 100
+                )
 
-        job.status = "SUCCESS"
-        job.total_comments = saved_count
-        job.finished_at = datetime.utcnow()
-        await db.commit()
+            comment_service = CommentService(db)
+            saved_count = await comment_service.save_comments(video_id, comments_data)
 
-        logger.info(f"Scraping selesai untuk job {job_id}: {saved_count} komentar")
-
-    except Exception as e:
-        if job:
-            job.status = "FAILED"
+            job.status = "SUCCESS"
+            job.total_comments = saved_count
             job.finished_at = datetime.utcnow()
             await db.commit()
-        logger.error(f"Scraping gagal untuk job {job_id}: {str(e)}")
+
+            logger.info(f"Scraping selesai untuk job {job_id}: {saved_count} komentar")
+
+        except Exception as e:
+            if job:
+                job.status = "FAILED"
+                job.finished_at = datetime.utcnow()
+                await db.commit()
+            logger.error(f"Scraping gagal untuk job {job_id}: {str(e)}")
 
 
 @router.post("/scrape", response_model=ApiResponse)
@@ -71,7 +82,7 @@ async def trigger_scrape(
     await db.commit()
     await db.refresh(job)
 
-    background_tasks.add_task(run_scraping, video.id, request.url, job.id, db)
+    background_tasks.add_task(run_scraping, video.id, request.url, job.id)
 
     return ApiResponse(
         success=True,
