@@ -16,8 +16,8 @@ export const scrapingFormSchema = z.object({
       },
       "URL harus dari TikTok (tiktok.com)"
     ),
-  maxComments: z.coerce
-    .number()
+  maxComments: z
+    .number({ message: "Harus berupa angka" })
     .min(1, "Minimal 1 komentar")
     .max(10000, "Maksimal 10000 komentar"),
 });
