@@ -44,6 +44,7 @@ export const apiClient = {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
+        "ngrok-skip-browser-warning": "69420",
       },
     });
 
@@ -55,6 +56,7 @@ export const apiClient = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "ngrok-skip-browser-warning": "69420",
       },
       body: body ? JSON.stringify(body) : undefined,
     });
