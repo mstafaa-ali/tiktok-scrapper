@@ -1210,3 +1210,7 @@ https://www.tiktok.com/@therock/video/6829267836783971589
 2026-06-23 15:38:41 | INFO     | api | Logging system initialized
 2026-06-23 15:38:44 | INFO     | api | Logging system initialized
 2026-06-23 15:41:54 | INFO     | api | Logging system initialized
+2026-06-23 16:11:41 | INFO     | api | Video baru dibuat: 7649867025828957443
+2026-06-23 16:12:02 | INFO     | api | Berhasil menyimpan 100 komentar baru untuk video f95d2036-c08a-4ce5-8a68-eada08cf20ef
+2026-06-23 16:12:02 | INFO     | api | Scraping selesai untuk job 3723ac90-f20e-40a7-bcf7-20aee149d6bf: 100 komentar
+2026-06-23 16:14:15 | INFO     | api | Logging system initialized

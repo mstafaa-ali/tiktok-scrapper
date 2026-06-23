@@ -10,6 +10,12 @@ import { useComments } from "@/hooks/use-comments";
 import { commentService } from "@/services/comments";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 import { useFilterStore } from "@/stores/filter-store";
 
@@ -70,8 +76,8 @@ export function CommentsClient() {
     }
   }, [router]);
 
-  const handleExport = useCallback(() => {
-    const url = commentService.getExportUrl(videoId);
+  const handleExport = useCallback((format: string) => {
+    const url = commentService.getExportUrl(videoId, format);
     window.open(url, "_blank");
   }, [videoId]);
 
@@ -100,10 +106,22 @@ export function CommentsClient() {
             onVideoChange={handleVideoFilter}
           />
         </div>
-        <Button variant="outline" onClick={handleExport}>
-          <Download className="mr-2 h-4 w-4" />
-          Export CSV
-        </Button>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="outline">
+              <Download className="mr-2 h-4 w-4" />
+              Export
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            <DropdownMenuItem onClick={() => handleExport("csv")}>
+              Export as CSV
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => handleExport("excel")}>
+              Export as Excel
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
 
       {/* Total count */}

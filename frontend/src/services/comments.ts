@@ -18,11 +18,13 @@ export const commentService = {
     return apiClient.get<CommentListResponse>("/comments/search", { q: query });
   },
 
-  getExportUrl: (videoId?: string): string => {
+  getExportUrl: (videoId?: string, format: string = "csv"): string => {
     const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api";
+    const params = new URLSearchParams();
+    params.append("format", format);
     if (videoId) {
-      return `${baseUrl}/comments/export?video_id=${videoId}`;
+      params.append("video_id", videoId);
     }
-    return `${baseUrl}/comments/export`;
+    return `${baseUrl}/comments/export?${params.toString()}`;
   },
 };
