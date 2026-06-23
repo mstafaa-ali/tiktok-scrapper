@@ -43,8 +43,68 @@ class VideoService:
         result = await self.db.execute(stmt)
         return result.scalar_one_or_none()
 
-    async def get_all_videos(self, skip: int = 0, limit: int = 20) -> list[Video]:
-        """Ambil semua video dengan pagination."""
-        stmt = select(Video).offset(skip).limit(limit)
+    async def get_all_videos(
+        self,
+        skip: int = 0,
+        limit: int = 20,
+        search: str | None = None,
+        sort_by: str = "created_at",
+        sort_order: str = "desc"
+    ) -> tuple[list[dict], int]:
+        from sqlalchemy import func, desc, asc, or_
+        from app.models.comment import Comment
+
+        # Hitung total
+        count_stmt = select(func.count(Video.id))
+        if search:
+            count_stmt = count_stmt.where(
+                or_(
+                    Video.description.ilike(f"%{search}%"),
+                    Video.author_username.ilike(f"%{search}%")
+                )
+            )
+        total_result = await self.db.execute(count_stmt)
+        total = total_result.scalar_one()
+
+        # Ambil data
+        stmt = select(
+            Video,
+            func.count(Comment.id).label("comment_count")
+        ).outerjoin(
+            Comment, Video.id == Comment.video_id
+        ).group_by(Video.id)
+
+        if search:
+            stmt = stmt.where(
+                or_(
+                    Video.description.ilike(f"%{search}%"),
+                    Video.author_username.ilike(f"%{search}%")
+                )
+            )
+
+        # Sorting
+        sort_col = getattr(Video, sort_by, Video.created_at)
+        if sort_order == "desc":
+            stmt = stmt.order_by(desc(sort_col))
+        else:
+            stmt = stmt.order_by(asc(sort_col))
+
+        stmt = stmt.offset(skip).limit(limit)
         result = await self.db.execute(stmt)
-        return list(result.scalars().all())
+
+        videos = []
+        for row in result.all():
+            video_obj = row.Video
+            video_dict = {
+                "id": video_obj.id,
+                "tiktok_video_id": video_obj.tiktok_video_id,
+                "url": video_obj.url,
+                "author_username": video_obj.author_username,
+                "description": video_obj.description,
+                "created_at": video_obj.created_at,
+                "updated_at": video_obj.updated_at,
+                "comment_count": row.comment_count
+            }
+            videos.append(video_dict)
+
+        return videos, total

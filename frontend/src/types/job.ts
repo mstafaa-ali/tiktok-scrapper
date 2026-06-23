@@ -5,6 +5,7 @@ export interface ScrapeJob {
   video_id: string;
   video_url: string;
   status: JobStatus;
+  target_comments: number;
   comments_scraped: number;
   error_message: string | null;
   started_at: string;

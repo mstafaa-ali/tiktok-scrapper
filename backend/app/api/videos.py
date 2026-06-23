@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, BackgroundTasks, HTTPException
+from fastapi import APIRouter, Depends, BackgroundTasks, HTTPException, Query
 from sqlalchemy.ext.asyncio import AsyncSession
 from uuid import UUID
 from datetime import datetime
@@ -25,6 +25,7 @@ async def run_scraping(video_id: UUID, video_url: str, job_id: UUID, max_comment
     import concurrent.futures
     from app.database.connection import async_session
     from app.services.scraper_service import sync_get_video_comments
+    from app.core.config import settings
 
     # Gunakan session DB yang baru untuk task background ini
     async with async_session() as db:
@@ -38,13 +39,13 @@ async def run_scraping(video_id: UUID, video_url: str, job_id: UUID, max_comment
 
             # Jalankan scraper di proses terpisah untuk menghindari konflik Playwright dengan event loop Uvicorn
             loop = asyncio.get_running_loop()
-            with concurrent.futures.ProcessPoolExecutor() as pool:
-                comments_data = await loop.run_in_executor(
-                    pool, sync_get_video_comments, video_url, max_comments
+            with concurrent.futures.ProcessPoolExecutor(max_workers=settings.SCRAPING_CONCURRENCY) as pool:
+                saved_count = await loop.run_in_executor(
+                    pool, sync_get_video_comments, video_url, str(video_id), max_comments
                 )
 
-            comment_service = CommentService(db)
-            saved_count = await comment_service.save_comments(video_id, comments_data)
+            # Penyimpanan dilakukan secara incremental oleh child process,
+            # sync_get_video_comments langsung me-return total komentar yang berhasil di-scrape.
 
             job.status = "SUCCESS"
             job.total_comments = saved_count
@@ -58,7 +59,7 @@ async def run_scraping(video_id: UUID, video_url: str, job_id: UUID, max_comment
                 job.status = "FAILED"
                 job.finished_at = datetime.utcnow()
                 await db.commit()
-            logger.error(f"Scraping gagal untuk job {job_id}: {str(e)}")
+            logger.error(f"Scraping gagal untuk job {job_id}: {type(e).__name__}: {e}", exc_info=True)
 
 
 @router.post("/scrape", response_model=ApiResponse)
@@ -77,7 +78,7 @@ async def trigger_scrape(
         url=request.url,
     )
 
-    job = ScrapeJob(video_id=video.id, status="PENDING")
+    job = ScrapeJob(video_id=video.id, status="PENDING", target_comments=request.max_comments)
     db.add(job)
     await db.commit()
     await db.refresh(job)
@@ -110,15 +111,34 @@ async def get_video(
 
 @router.get("", response_model=ApiResponse)
 async def list_videos(
-    skip: int = 0,
-    limit: int = 20,
+    page: int = Query(1, ge=1, description="Halaman"),
+    page_size: int = Query(20, ge=1, le=100, description="Jumlah per halaman"),
+    search: str | None = Query(None, description="Pencarian"),
+    sort_by: str = Query("created_at", description="Kolom sorting"),
+    sort_order: str = Query("desc", description="Arah sorting"),
     db: AsyncSession = Depends(get_db),
 ):
     """Ambil semua video dengan pagination."""
     video_service = VideoService(db)
-    videos = await video_service.get_all_videos(skip=skip, limit=limit)
+    skip = (page - 1) * page_size
+    videos, total = await video_service.get_all_videos(
+        skip=skip,
+        limit=page_size,
+        search=search,
+        sort_by=sort_by,
+        sort_order=sort_order
+    )
+
+    import math
+    total_pages = math.ceil(total / page_size) if total > 0 else 1
 
     return ApiResponse(
         success=True,
-        data=[VideoResponse.model_validate(v).model_dump() for v in videos],
+        data={
+            "data": [VideoResponse.model_validate(v).model_dump() for v in videos],
+            "total": total,
+            "page": page,
+            "page_size": page_size,
+            "total_pages": total_pages
+        }
     )

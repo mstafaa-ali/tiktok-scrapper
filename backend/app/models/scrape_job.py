@@ -11,6 +11,7 @@ class ScrapeJob(Base):
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     video_id = Column(UUID(as_uuid=True), ForeignKey("videos.id", ondelete="CASCADE"), nullable=False)
     status = Column(String(20), default="PENDING", nullable=False)
+    target_comments = Column(Integer, default=100)
     total_comments = Column(Integer, default=0)
     started_at = Column(DateTime, default=datetime.utcnow)
     finished_at = Column(DateTime, nullable=True)

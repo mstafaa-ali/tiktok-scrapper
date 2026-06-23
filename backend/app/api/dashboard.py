@@ -53,16 +53,16 @@ async def get_recent_activity(db: AsyncSession = Depends(get_db)):
     for job in jobs:
         if job.status == "SUCCESS":
             act_desc = f"Scraping completed: {job.total_comments} comments"
-            activities.append(RecentActivity(id=str(job.id), type="comments_added", description=act_desc, timestamp=job.finished_at or job.created_at))
+            activities.append(RecentActivity(id=str(job.id), type="comments_added", description=act_desc, timestamp=job.finished_at or job.started_at))
         elif job.status == "FAILED":
             act_desc = f"Scraping failed"
-            activities.append(RecentActivity(id=str(job.id), type="scrape", description=act_desc, timestamp=job.finished_at or job.created_at))
+            activities.append(RecentActivity(id=str(job.id), type="scrape", description=act_desc, timestamp=job.finished_at or job.started_at))
         elif job.status == "RUNNING":
             act_desc = f"Scraping started..."
-            activities.append(RecentActivity(id=str(job.id), type="scrape", description=act_desc, timestamp=job.created_at))
+            activities.append(RecentActivity(id=str(job.id), type="scrape", description=act_desc, timestamp=job.started_at))
         elif job.status == "PENDING":
             act_desc = f"Scraping pending..."
-            activities.append(RecentActivity(id=str(job.id), type="scrape", description=act_desc, timestamp=job.created_at))
+            activities.append(RecentActivity(id=str(job.id), type="scrape", description=act_desc, timestamp=job.started_at))
 
     return ApiResponse(
         success=True,

@@ -8,6 +8,7 @@ class JobResponse(BaseModel):
     video_id: UUID
     video_url: str | None = None
     status: str
+    target_comments: int
     comments_scraped: int
     error_message: str | None = None
     started_at: datetime

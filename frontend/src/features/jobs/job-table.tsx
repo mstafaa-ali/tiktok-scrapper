@@ -73,7 +73,7 @@ const columns: Column<ScrapeJob>[] = [
     sortable: true,
     render: (job) => (
       <span className="font-medium">
-        {job.comments_scraped.toLocaleString()}
+        {job.comments_scraped.toLocaleString()} / {job.target_comments.toLocaleString()}
       </span>
     ),
   },
