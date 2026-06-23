@@ -86,7 +86,7 @@ export function ScrapingForm({ onSuccess }: ScrapingFormProps) {
               min={1}
               max={10000}
               placeholder="100"
-              {...form.register("maxComments")}
+              {...form.register("maxComments", { valueAsNumber: true })}
               disabled={scraping.isPending}
             />
             {form.formState.errors.maxComments && (

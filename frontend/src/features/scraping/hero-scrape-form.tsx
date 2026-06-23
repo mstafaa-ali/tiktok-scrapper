@@ -113,7 +113,7 @@ export function HeroScrapeForm() {
                 min={1}
                 max={10000}
                 className="w-24 bg-background/80 text-center border-2 border-border/50"
-                {...form.register("maxComments")}
+                {...form.register("maxComments", { valueAsNumber: true })}
                 disabled={scraping.isPending}
               />
             </div>
