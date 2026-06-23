@@ -24,6 +24,7 @@ export function ScrapingForm({ onSuccess }: ScrapingFormProps) {
     resolver: zodResolver(scrapingFormSchema),
     defaultValues: {
       videoUrl: "",
+      maxComments: 100,
     },
   });
 
@@ -31,6 +32,7 @@ export function ScrapingForm({ onSuccess }: ScrapingFormProps) {
     try {
       const result = await scraping.mutateAsync({
         video_url: values.videoUrl,
+        max_comments: values.maxComments,
       });
       form.reset();
       toast.success("Scraping dimulai!", {
@@ -70,6 +72,26 @@ export function ScrapingForm({ onSuccess }: ScrapingFormProps) {
             {form.formState.errors.videoUrl && (
               <p className="text-sm text-destructive">
                 {form.formState.errors.videoUrl.message}
+              </p>
+            )}
+          </div>
+
+          <div className="space-y-2">
+            <label htmlFor="maxComments" className="text-sm font-medium">
+              Jumlah Komentar
+            </label>
+            <Input
+              id="maxComments"
+              type="number"
+              min={1}
+              max={10000}
+              placeholder="100"
+              {...form.register("maxComments")}
+              disabled={scraping.isPending}
+            />
+            {form.formState.errors.maxComments && (
+              <p className="text-sm text-destructive">
+                {form.formState.errors.maxComments.message}
               </p>
             )}
           </div>

@@ -1,5 +1,6 @@
 export interface ScrapeRequest {
   video_url: string;
+  max_comments?: number;
 }
 
 export interface ScrapeResponse {

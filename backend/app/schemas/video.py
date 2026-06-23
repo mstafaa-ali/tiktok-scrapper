@@ -5,6 +5,7 @@ from datetime import datetime
 
 class ScrapeRequest(BaseModel):
     url: str
+    max_comments: int = 100
 
 
 class VideoResponse(BaseModel):

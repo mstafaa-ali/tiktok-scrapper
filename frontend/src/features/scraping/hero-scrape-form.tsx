@@ -21,6 +21,7 @@ export function HeroScrapeForm() {
     resolver: zodResolver(scrapingFormSchema),
     defaultValues: {
       videoUrl: "",
+      maxComments: 100,
     },
   });
 
@@ -28,6 +29,7 @@ export function HeroScrapeForm() {
     try {
       const result = await scraping.mutateAsync({
         video_url: values.videoUrl,
+        max_comments: values.maxComments,
       });
       form.reset();
       toast.success("Scraping started successfully!", {
@@ -100,6 +102,27 @@ export function HeroScrapeForm() {
               {form.formState.errors.videoUrl.message}
             </p>
           )}
+          <div className="mt-8 flex flex-col items-center justify-center gap-2">
+            <div className="flex items-center gap-4">
+              <label htmlFor="maxCommentsHero" className="text-sm font-medium text-muted-foreground">
+                Batas Komentar:
+              </label>
+              <Input
+                id="maxCommentsHero"
+                type="number"
+                min={1}
+                max={10000}
+                className="w-24 bg-background/80 text-center border-2 border-border/50"
+                {...form.register("maxComments")}
+                disabled={scraping.isPending}
+              />
+            </div>
+            {form.formState.errors.maxComments && (
+              <p className="text-sm font-medium text-destructive">
+                {form.formState.errors.maxComments.message}
+              </p>
+            )}
+          </div>
         </form>
 
         <div className="grid grid-cols-3 gap-4 md:gap-8 w-full max-w-2xl mt-8 pt-8 border-t border-border/50">

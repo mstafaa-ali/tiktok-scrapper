@@ -19,7 +19,7 @@ logger = logging.getLogger("api")
 router = APIRouter(prefix="/api/videos", tags=["Videos"])
 
 
-async def run_scraping(video_id: UUID, video_url: str, job_id: UUID):
+async def run_scraping(video_id: UUID, video_url: str, job_id: UUID, max_comments: int = 100):
     """Background task untuk menjalankan scraping."""
     import asyncio
     import concurrent.futures
@@ -40,7 +40,7 @@ async def run_scraping(video_id: UUID, video_url: str, job_id: UUID):
             loop = asyncio.get_running_loop()
             with concurrent.futures.ProcessPoolExecutor() as pool:
                 comments_data = await loop.run_in_executor(
-                    pool, sync_get_video_comments, video_url, 100
+                    pool, sync_get_video_comments, video_url, max_comments
                 )
 
             comment_service = CommentService(db)
@@ -82,7 +82,7 @@ async def trigger_scrape(
     await db.commit()
     await db.refresh(job)
 
-    background_tasks.add_task(run_scraping, video.id, request.url, job.id)
+    background_tasks.add_task(run_scraping, video.id, request.url, job.id, request.max_comments)
 
     return ApiResponse(
         success=True,
