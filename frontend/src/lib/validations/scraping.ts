@@ -19,8 +19,7 @@ export const scrapingFormSchema = z.object({
   maxComments: z.coerce
     .number()
     .min(1, "Minimal 1 komentar")
-    .max(10000, "Maksimal 10000 komentar")
-    .default(100),
+    .max(10000, "Maksimal 10000 komentar"),
 });
 
 export type ScrapingFormValues = z.infer<typeof scrapingFormSchema>;
